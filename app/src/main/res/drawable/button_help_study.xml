@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 原文按钮 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 没有选中时的图片 -->
+    <item
+        android:state_checked="false"
+        android:drawable="@mipmap/button_help_study_normal" />
+    <!-- 选中时的图片 -->
+    <item
+        android:state_checked="true"
+        android:drawable="@mipmap/button_help_study_checked" />
+    <!-- 按钮没有按下时的图片 -->
+    <!--<item-->
+        <!--android:state_pressed="false"-->
+        <!--android:drawable="@mipmap/button_help_study_normal"/>-->
+    <!-- 按钮按下时的图片 -->
+    <item
+        android:state_pressed="true"
+        android:drawable="@mipmap/button_help_study_pressed"/>
+</selector>

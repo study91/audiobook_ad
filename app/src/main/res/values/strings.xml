@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">人教版四年级语文下册</string> <!-- 应用名称 -->
+    <string name="version">【版本号：[version]】</string> <!-- 版本号 -->
+    <string name="assets_config_filename">study91/config/book.properties</string> <!-- 配置文件 -->
+
+    <string name="msg_synchronization_enable">自动同步已开启</string>
+    <string name="msg_synchronization_disable">自动同步已关闭</string>
+    <string name="msg_no_net">无网络，请检查网络连接！</string>
+
+    <string name="dialog_volume_title">设置音量</string>
+    <string name="dialog_exit_title">退出系统</string>
+    <string name="dialog_exit_message">请确定是否退出系统</string>
+    <string name="dialog_minimize_title">后台播放</string>
+    <string name="dialog_minimize_message">请确定是否后台播放</string>
+
+    <string name="dialog_update_title">软件更新</string>
+    <string name="dialog_update_message">检测到新版本，立即更新吗？\n\n当前版本：[current_version]\n最新版本：[remote_version]</string>
+    <string name="dialog_update_at_once">立即更新</string>
+    <string name="dialog_update_later">稍后更新</string>
+    <string name="dialog_updating">正在更新</string>
+    <string name="dialog_update_cancel">取消更新</string>
+    <string name="dialog_no_update">当前版本：[current_version]\n\n您现在使用的是最新版，不需要更新！</string>
+
+    <string name="notification_playing">正在播放</string>
+    <string name="notification_pause">暂停播放</string>
+
+    <string name="button_reload">重新加载</string>
+    <string name="button_book">选书</string>
+    <string name="button_catalog">目录</string>
+    <string name="button_synchronization">同步</string>
+    <string name="button_ok">确定</string>
+    <string name="button_exit">退出</string>
+    <string name="button_cancel">取消</string>
+
+    <string name="permission_dialog_message">亲爱的用户\n\n本软件需要您授予以下权限才能正常使用，请允许以下权限：\n\n[PERMISSION_NAMES]\n请到“应用信息 -> 权限” 中授予权限！</string>
+    <string name="permission_dialog_positive_button">立即手动授权</string>
+    <string name="permission_dialog_negative_button">取消</string>
+    <string name="permission_warning">请给软件授予必须的权限，否则软件不能正常使用。</string>
+</resources>

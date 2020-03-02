@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 媒体播放器暂停播放按钮图片 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 没有按下时的图片 -->
+    <item
+        android:state_pressed="false"
+        android:drawable="@mipmap/media_player_pause_normal"/>
+    
+    <!-- 按下时的图片 -->
+    <item
+        android:state_pressed="true"
+        android:drawable="@mipmap/media_player_pause_pressed"/>
+</selector>

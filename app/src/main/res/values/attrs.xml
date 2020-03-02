@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="border_width" format="dimension"/>
+    <attr name="border_color" format="color"/>
+
+    <!--描边字体-->
+    <declare-styleable name="StrokeTextView">
+        <attr name="border_color"/>
+        <attr name="border_width"/>
+    </declare-styleable>
+</resources>

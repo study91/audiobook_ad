@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 封面图片 -->
+    <com.study91.audiobook.view.CoverImageView
+        android:layout_above="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 顶部布局 -->
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_top_height"
+        android:background="@drawable/toolbar_background" >
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back" />
+
+        <!-- 功能按钮布局 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 更多内容浏览器 -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_below="@+id/topLayout"
+        android:layout_above="@+id/mediaPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 媒体播放器 -->
+    <com.study91.audiobook.view.MediaPlayerView
+        android:id="@+id/mediaPlayerView"
+        android:layout_above="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 广告布局 -->
+    <RelativeLayout
+        android:id="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <!-- 横幅广告 -->
+        <!--<com.study91.audiobook.ad.BannerView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_horizontal"/>-->
+    </RelativeLayout>
+</RelativeLayout>

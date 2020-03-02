@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="3dp">
+
+    <RelativeLayout
+        android:id="@+id/iconLayout"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="3dp"
+        android:layout_centerVertical="true" >
+        <!-- 图标 -->
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/catalog_group_icon"/>
+
+        <!-- 书ID -->
+        <TextView
+            android:id="@+id/bookIDTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="@color/popup_window_text"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <!-- 书名称 -->
+    <com.study91.audiobook.view.ScrollTextView
+        android:id="@+id/bookNameTextView"
+        android:layout_toRightOf="@+id/iconLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textColor="@drawable/hyperlink_blank"
+        android:textStyle="bold"
+        android:singleLine="true"/>
+
+</RelativeLayout>

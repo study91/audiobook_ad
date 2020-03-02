@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="3dp">
+
+    <!-- 图标布局 -->
+    <RelativeLayout
+        android:id="@+id/iconLayout"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_centerVertical="true" >
+        <!-- 目录图标 -->
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/catalog_group_icon"/>
+
+        <!-- 目录页号 -->
+        <TextView
+            android:id="@+id/pageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="@color/popup_window_text"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <!-- 目录标题 -->
+    <com.study91.audiobook.view.ScrollTextView
+        android:id="@+id/titleTextView"
+        android:layout_toRightOf="@+id/iconLayout"
+        android:layout_toLeftOf="@+id/rightLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/popup_window_text"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"/>
+
+    <!-- 右边布局 -->
+    <LinearLayout
+        android:id="@+id/rightLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+        <!-- 循环图标 -->
+        <ImageView
+            android:id="@+id/loopImageView"
+            android:layout_toLeftOf="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"/>
+
+        <!-- 播放按钮 -->
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/catalog_group_play"/>
+    </LinearLayout>
+</RelativeLayout>

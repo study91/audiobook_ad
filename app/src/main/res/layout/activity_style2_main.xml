@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:audiobook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 全屏布局 -->
+    <RelativeLayout
+        android:id="@+id/fullLayout"
+        android:layout_above="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+
+    <!-- 顶部布局 -->
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:background="@drawable/toolbar_background" >
+        <!-- 授权信息 -->
+        <TextView
+            android:id="@+id/empowerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:text="@string/app_name"/>
+    </RelativeLayout>
+
+    <!-- 选书按钮 -->
+    <Button
+        android:id="@+id/bookButton"
+        android:layout_below="@+id/topLayout"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/style2_button_book"/>
+
+    <!-- 中间布局 -->
+    <LinearLayout
+        android:layout_below="@+id/topLayout"
+        android:layout_above="@+id/mediaPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/cover_transparent">
+
+        <!-- 标题图片 -->
+        <ImageView
+            android:id="@+id/titleImageButton"
+            android:layout_width="250dp"
+            android:layout_height="120dp" />
+
+        <!-- 版本号 -->
+        <com.study91.audiobook.view.StrokeTextView
+            android:id="@+id/versionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            audiobook:border_color="#BBFFFFFF"
+            audiobook:border_width="2dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="#663300"
+            android:textStyle="bold"
+            android:text="@string/app_name"/>
+
+        <!-- 目录按钮 -->
+        <Button
+            android:id="@+id/catalogButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/style2_button_catalog"/>
+
+        <!-- 分享按钮 -->
+        <Button
+            android:id="@+id/shareButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_share"
+            android:visibility="gone"/>
+
+        <!-- 帮助按钮 -->
+        <Button
+            android:id="@+id/helpButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/style2_button_help"/>
+
+        <!-- 推荐按钮 -->
+        <Button
+            android:id="@+id/recommendButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_margin="4dp"
+            android:background="@drawable/button_recommend"
+            android:visibility="gone"/>
+
+        <!-- 播放按钮 -->
+        <!--<Button-->
+            <!--android:id="@+id/playButton"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_margin="2dp"-->
+            <!--android:background="@drawable/style2_button_exit"-->
+            <!--android:visibility="gone"/>-->
+
+        <!-- 退出按钮 -->
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/style2_button_exit"/>
+    </LinearLayout>
+
+    <!-- 版权信息 -->
+    <com.study91.audiobook.view.StrokeTextView
+        android:id="@+id/copyrightTextView"
+        android:layout_above="@+id/mediaPlayerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        audiobook:border_color="#FFFFFF"
+        audiobook:border_width="1dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="#663300"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:text="@string/app_name"/>
+
+    <!-- 媒体播放器 -->
+    <com.study91.audiobook.view.MediaPlayerView
+        android:id="@+id/mediaPlayerView"
+        android:layout_above="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 广告布局 -->
+    <RelativeLayout
+        android:id="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <!-- 横幅广告 -->
+        <!--<com.study91.audiobook.ad.BannerView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_horizontal"/>-->
+    </RelativeLayout>
+</RelativeLayout>

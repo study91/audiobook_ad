@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 封面图片 -->
+    <com.study91.audiobook.view.CoverImageView
+        android:layout_above="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 顶部布局 -->
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_top_height"
+        android:background="@drawable/toolbar_background" >
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back" />
+
+        <!-- 功能按钮布局 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/helpRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <!-- 学习方法按钮 -->
+                <RadioButton
+                    android:id="@+id/studyRadioButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_width"
+                    android:checked="false"
+                    android:button="@null"
+                    android:background="@drawable/button_help_study"/>
+                <!-- 常见问题按钮 -->
+                <RadioButton
+                    android:id="@+id/questionRadioButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_width"
+                    android:checked="false"
+                    android:button="@null"
+                    android:background="@drawable/button_help_question"/>
+                <!-- 推荐按钮 -->
+                <RadioButton
+                    android:id="@+id/recommendRadioButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_width"
+                    android:checked="false"
+                    android:button="@null"
+                    android:background="@drawable/button_help_recommend"/>
+            </RadioGroup>
+
+            <!-- 分享按钮 -->
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/button_help_update"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 浏览器 -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_below="@+id/topLayout"
+        android:layout_above="@+id/mediaPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layout_transparent"/>
+
+    <LinearLayout
+        android:id="@+id/noNetLayout"
+        android:layout_below="@+id/topLayout"
+        android:layout_above="@+id/mediaPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#aaaaaa" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/no_net"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="@string/msg_no_net"/>
+        <Button
+            android:id="@+id/reloadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_background"
+            android:text="@string/button_reload"/>
+    </LinearLayout>
+
+    <!-- 媒体播放器 -->
+    <com.study91.audiobook.view.MediaPlayerView
+        android:id="@+id/mediaPlayerView"
+        android:layout_above="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 广告布局 -->
+    <RelativeLayout
+        android:id="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <!-- 横幅广告 -->
+        <!--<com.study91.audiobook.ad.BannerView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_horizontal"/>-->
+    </RelativeLayout>
+</RelativeLayout>

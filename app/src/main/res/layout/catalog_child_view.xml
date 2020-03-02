@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="#44CCCCCC">
+
+    <!-- 显示按钮 -->
+    <Button
+        android:id="@+id/displayButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/catalog_child_display" />
+
+    <!-- 详解按钮 -->
+    <Button
+        android:id="@+id/explainButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/catalog_child_explain" />
+
+    <!-- 复读起点按钮 -->
+    <Button
+        android:id="@+id/firstButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/catalog_child_first" />
+
+    <!-- 复读终点按钮 -->
+    <Button
+        android:id="@+id/lastButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/catalog_child_last" />
+
+    <!-- 充许播放语音按钮 -->
+    <Button
+        android:id="@+id/allowPlayAudioButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/catalog_child_add" />
+</LinearLayout>

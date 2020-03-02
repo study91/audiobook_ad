@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="button_text">#FFFFFF</color> <!-- 按钮文本颜色 -->
+    <color name="media_player_text">#FFFFFF</color> <!-- 媒体标题文本颜色 -->
+    <color name="popup_window_text">#000000</color> <!-- 弹出窗口文本颜色 -->
+    <color name="list_view_divider">#000000</color> <!-- 列表分隔线颜色 -->
+    <color name="catalog_group_current">#BBFFCC33</color> <!-- 目录当前组项颜色 -->
+    <color name="layout_transparent">#EEFFFFFF</color> <!-- 布局透明色 -->
+    <color name="cover_transparent">#33F5F5F5</color> <!-- 封面透明色 -->
+</resources>
