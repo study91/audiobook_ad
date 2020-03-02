@@ -47,4 +47,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/umeng-common-2.1.8.jar')
     implementation files('libs/umeng-analytics-8.1.4.jar')
+    implementation files('libs/adwosdk6.5.jar')
 }

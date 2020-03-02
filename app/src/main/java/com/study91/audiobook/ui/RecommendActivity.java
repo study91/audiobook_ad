@@ -20,6 +20,7 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 
 import com.study91.audiobook.R;
+import com.study91.audiobook.ad.AdManager;
 import com.study91.audiobook.book.BookManager;
 import com.study91.audiobook.book.IBook;
 import com.study91.audiobook.option.IOption;
@@ -75,8 +76,8 @@ public class RecommendActivity extends Activity {
         ui.backButton.setOnClickListener(new OnBackButtonClickListener()); //返回按钮
 
         //添加广告
-//        ui.adLayout = (RelativeLayout) findViewById(R.id.adLayout); //广告布局
-//        ui.adLayout.addView(AdManager.getAd(this).getBannerView()); //添加横幅广告
+        ui.adLayout = (RelativeLayout) findViewById(R.id.adLayout); //广告布局
+        ui.adLayout.addView(AdManager.getAd(this).getBannerView()); //添加横幅广告
     }
 
     /**

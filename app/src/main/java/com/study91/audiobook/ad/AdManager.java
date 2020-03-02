@@ -25,7 +25,8 @@ public class AdManager {
             //广告平台处理
             switch (book.getAdPlatform()) {
                 case PLATFORM_ADWO: //安沃
-                    M.ad = new DefaultAd(context); //暂时显示默认广告子类
+                    //M.ad = new DefaultAd(context); //暂时显示默认广告子类
+                    M.ad = new AdwoAd(context);
                     break;
                 case PLATFROM_GDT: //广点通
                     break;

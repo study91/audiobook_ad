@@ -65,8 +65,8 @@ public class ContentActivity1 extends Activity {
         ui.originalRadioButton.setChecked(true); //默认为选择原文按钮
 
         //添加广告
-//        ui.adLayout = (RelativeLayout) findViewById(R.id.adLayout); //广告布局
-//        ui.adLayout.addView(AdManager.getAd(this).getBannerView()); //添加横幅广告
+        ui.adLayout = (RelativeLayout) findViewById(R.id.adLayout); //广告布局
+        ui.adLayout.addView(AdManager.getAd(this).getBannerView()); //添加横幅广告
 
         m.mediaClient = new MediaClient(this); //媒体客户端
         m.mediaClient.register(); //注册媒体客户端

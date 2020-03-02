@@ -70,8 +70,8 @@ public class FullActivity extends Activity {
         ui.largeFontButton.setOnClickListener(new OnLargeFontClickListener());
 
         //添加广告
-//        ui.adLayout = (RelativeLayout) findViewById(R.id.adLayout); //广告布局
-//        ui.adLayout.addView(AdManager.getAd(this).getBannerView()); //添加横幅广告
+        ui.adLayout = (RelativeLayout) findViewById(R.id.adLayout); //广告布局
+        ui.adLayout.addView(AdManager.getAd(this).getBannerView()); //添加横幅广告
 
         //隐藏媒体播放器全屏按钮
         Button fullScreenButton = (Button)ui.mediaPlayerView.findViewById(R.id.fullScreenButton);

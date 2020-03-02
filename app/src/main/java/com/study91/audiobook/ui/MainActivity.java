@@ -136,8 +136,8 @@ public class MainActivity extends Activity {
         ui.fullLayout.addView(ui.contentImageViewPager); //添加内容视图到全屏布局中
 
         //添加广告
-//        ui.adLayout = (RelativeLayout) findViewById(R.id.adLayout); //广告布局
-//        ui.adLayout.addView(AdManager.getAd(this).getBannerView()); //添加横幅广告
+        ui.adLayout = (RelativeLayout) findViewById(R.id.adLayout); //广告布局
+        ui.adLayout.addView(AdManager.getAd(this).getBannerView()); //添加横幅广告
 
         //友盟统计开始
         String umeng_appkey = getBook().getStatisticsID(); //获取统计ID
